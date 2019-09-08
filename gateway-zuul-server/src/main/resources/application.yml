@@ -1,0 +1,26 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8080
+
+zuul:
+  routes:
+    auth-server:
+      path: /auth/**
+      serviceId: oauth-server
+      sensitiveHeaders:
+    mybatis:
+      path: /mybatis/**
+      serviceId: mybatis-rw
+
+security:
+  oauth2:
+    resource:
+      user-info-uri:  http://localhost:8081/user
+      prefer-token-info: false
+spring:
+  application:
+    name: gateway-server

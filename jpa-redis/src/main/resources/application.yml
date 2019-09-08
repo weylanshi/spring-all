@@ -1,0 +1,11 @@
+spring:
+  redis:
+    host: 172.21.0.9
+    port: 63790
+    password: vu2SUdSajr6H5IS1
+  datasource:
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+    username: qa
+    password: XWS@app123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.21.0.9:33066/article_service?rewriteBatchedStatements=true&serverTimezone=PRC&useLegacyDatetimeCode=false

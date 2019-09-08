@@ -1,0 +1,26 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: mybatis-rw
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/master
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave1:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/slave1
+      username: root   # 只读账户
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave2:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/slave2
+      username: root   # 只读账户
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
